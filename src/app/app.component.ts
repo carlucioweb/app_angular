@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-dream-app';
+  ultimoId = 0;
+  nome = 'Carlúcio';
+  adicionado = false;
+  funcionarios = [];
+
+  adicionar() {
+
+    this.adicionado = true;
+    console.log(this.nome);
+
+    this.funcionarios.push({
+      
+      id: ++this.ultimoId,
+      nome: this.nome
+    
+    });
+
+  }
+
+
+
 }
